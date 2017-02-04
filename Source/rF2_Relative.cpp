@@ -1,9 +1,8 @@
 /*
-rF2 Delta Best Plugin
+rF2 Relative Time
 
-Author: Cosimo Streppone <cosimo@streppone.it>
-Date:   April/May 2014
-URL:    http://isiforums.net/f/showthread.php/19517-Delta-Best-plugin-for-rFactor-2
+Author: Martin Vindis <martin.vindis.80@gmail.com>
+Date:   2016/2017
 
 */
 

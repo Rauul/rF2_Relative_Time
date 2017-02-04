@@ -1,9 +1,8 @@
 /*
 rF2 Relative Time
 
-Author: Martin Vindis
-Date:   2016
-URL:	404
+Author: Martin Vindis <martin.vindis.80@gmail.com>
+Date:   2016/2017
  
 */
 
