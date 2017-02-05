@@ -937,9 +937,9 @@ void rF2_Relative::PostReset(const ScreenInfoV01 &info)
 	if (big_Font)
 		big_Font->OnResetDevice();
 	if (small_Font)
-		small_Font->OnLostDevice();
+		small_Font->OnResetDevice();
 	if (grid_Font)
-		grid_Font->OnLostDevice();
+		grid_Font->OnResetDevice();
 	if (background)
 		background->OnResetDevice();
 }
