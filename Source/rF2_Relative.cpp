@@ -226,6 +226,8 @@ void rF2_Relative::UpdateScoring(const ScoringInfoV01 &info)
 	drivers.clear();
 	int playerArrayPos;
 
+	local_player_in_control = false;
+
 	for (long i = 0; i < info.mNumVehicles; ++i)
 	{
 		VehicleScoringInfoV01 &vinfo = info.mVehicle[i];
@@ -236,13 +238,11 @@ void rF2_Relative::UpdateScoring(const ScoringInfoV01 &info)
 
 		drivers.push_back(driver);
 
-		/* If a swap happened, we are not the (original session) player, but we are now in control */
-		/* This is just my current theory atm, not sure it's true */
-		bool is_local_player = vinfo.mControl == 0;
-		if (!(vinfo.mIsPlayer || is_local_player))
+		// If this isn't the player car then there is no point going on
+		if (vinfo.mControl != 0)
 			continue;
 
-		local_player_in_control = vinfo.mControl == 0 || vinfo.mControl == 1;
+		local_player_in_control = true;
 
 		// We need this later
 		playerArrayPos = (int)drivers.size() - 1;

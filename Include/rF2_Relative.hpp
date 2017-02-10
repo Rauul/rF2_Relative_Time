@@ -24,7 +24,7 @@ using namespace std;
 #include <vector>
 
 #define PLUGIN_NAME             "rF2_RelativeTime"
-#define PLUGIN_VERSION			"1.16 B1"
+#define PLUGIN_VERSION			"1.16"
 
 #define  ENABLE_LOG              false
 
