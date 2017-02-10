@@ -47,7 +47,7 @@ using namespace std;
 #define BIG_FONT_NAME				"Arial"
 #define BIG_FONT_SIZE				38
 #define GRID_FONT_NAME				"Tahoma"
-#define GRID_FONT_SIZE				18
+#define GRID_FONT_SIZE				20
 
 #define USE_BORDERS					true
 #define BACKGROUND_COLOR			0xFF000000
@@ -64,7 +64,7 @@ using namespace std;
 #define DEFAULT_EDIT_KEY			(0x45)      /* "E" */
 #define KEY_DOWN(k)					((GetAsyncKeyState(k) & 0x8000) && (GetAsyncKeyState(VK_CONTROL) & 0x8000))
 
-#define FONT_NAME_MAXLEN 32
+#define FONT_NAME_MAXLEN			32
 
 #define DEFAULT_WIDGET_POSITION		0
 #define DEFAULT_WIDGET_SIZE			100

@@ -193,8 +193,7 @@
       <OutputFile>.\Release/InternalsPlugin.bsc</OutputFile>
     </Bscmake>
     <PostBuildEvent>
-      <Command>
-      </Command>
+      <Command>copy $(Platform)\$(Configuration)\RelativeTime.dll "D:\Games\Steam\steamapps\common\rFactor 2\Bin64\Plugins\"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">

@@ -1012,7 +1012,7 @@ void rF2_Relative::LoadConfig(struct PluginConfig &config, struct GridConfig &gr
 	config.background_color = GetPrivateProfileInt("Config", "BackgroundColor", BACKGROUND_COLOR, ini_file);
 	config.big_font_size = GetPrivateProfileInt("Config", "BigFontSize", BIG_FONT_SIZE, ini_file);
 	config.small_font_size = GetPrivateProfileInt("Config", "SmallFontSize", SMALL_FONT_SIZE, ini_file);
-	config.grid_font_size = GRID_FONT_SIZE;
+	config.grid_font_size = GetPrivateProfileInt("Config", "GridFontSize", GRID_FONT_SIZE, ini_file);
 	GetPrivateProfileString("Config", "BigFontName", BIG_FONT_NAME, config.big_font_name, FONT_NAME_MAXLEN, ini_file);
 	GetPrivateProfileString("Config", "SmallFontName", SMALL_FONT_NAME, config.small_font_name, FONT_NAME_MAXLEN, ini_file);
 	GetPrivateProfileString("Config", "GridFontName", GRID_FONT_NAME, config.grid_font_name, FONT_NAME_MAXLEN, ini_file);
