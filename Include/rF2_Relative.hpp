@@ -47,7 +47,7 @@ using namespace std;
 #define BIG_FONT_NAME				"Arial"
 #define BIG_FONT_SIZE				38
 #define GRID_FONT_NAME				"Tahoma"
-#define GRID_FONT_SIZE				20
+#define GRID_FONT_SIZE				17
 
 #define USE_BORDERS					true
 #define BACKGROUND_COLOR			0xFF000000

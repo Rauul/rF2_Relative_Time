@@ -239,7 +239,7 @@ void rF2_Relative::UpdateScoring(const ScoringInfoV01 &info)
 		drivers.push_back(driver);
 
 		// If this isn't the player car then there is no point going on
-		if (vinfo.mControl != 0)
+		if (vinfo.mControl > 1)
 			continue;
 
 		local_player_in_control = true;
@@ -1012,16 +1012,16 @@ void rF2_Relative::LoadConfig(struct PluginConfig &config, struct GridConfig &gr
 	config.background_color = GetPrivateProfileInt("Config", "BackgroundColor", BACKGROUND_COLOR, ini_file);
 	config.big_font_size = GetPrivateProfileInt("Config", "BigFontSize", BIG_FONT_SIZE, ini_file);
 	config.small_font_size = GetPrivateProfileInt("Config", "SmallFontSize", SMALL_FONT_SIZE, ini_file);
-	config.grid_font_size = GetPrivateProfileInt("Config", "GridFontSize", GRID_FONT_SIZE, ini_file);
 	GetPrivateProfileString("Config", "BigFontName", BIG_FONT_NAME, config.big_font_name, FONT_NAME_MAXLEN, ini_file);
 	GetPrivateProfileString("Config", "SmallFontName", SMALL_FONT_NAME, config.small_font_name, FONT_NAME_MAXLEN, ini_file);
-	GetPrivateProfileString("Config", "GridFontName", GRID_FONT_NAME, config.grid_font_name, FONT_NAME_MAXLEN, ini_file);
 
 	// [Input] section
 	config.editkey = GetPrivateProfileInt("Input", "EditKey", DEFAULT_EDIT_KEY, ini_file);
 
 	// [Grid] section
 	grid.enabled = GetPrivateProfileInt("Grid", "Enabled", DEFAULT_WIDGET_ENABLED, ini_file);
+	GetPrivateProfileString("Grid", "Font", GRID_FONT_NAME, config.grid_font_name, FONT_NAME_MAXLEN, ini_file);
+	config.grid_font_size = GetPrivateProfileInt("Grid", "FontSize", GRID_FONT_SIZE, ini_file);
 	grid.mode = GetPrivateProfileInt("Grid", "Mode", 1, ini_file);
 	GetPrivateProfileString("Grid", "PosX", DEFAULT_WIDGET_POSITION, str, 8, ini_file);
 	grid.offset.x = std::stoi(str);
