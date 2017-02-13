@@ -239,7 +239,7 @@ void rF2_Relative::UpdateScoring(const ScoringInfoV01 &info)
 		drivers.push_back(driver);
 
 		// If this isn't the player car then there is no point going on
-		if (vinfo.mControl > 1)
+		if (vinfo.mControl != 0)
 			continue;
 
 		local_player_in_control = true;
